@@ -20,7 +20,11 @@
                                 <rect key="frame" x="0.0" y="52" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="List" id="4fc-UD-eHl">
-                                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="DO1-Qj-U2a"/>
+                                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="DO1-Qj-U2a">
+                                            <connections>
+                                                <segue destination="5Vi-nO-qde" kind="show" id="zAM-mV-nSw"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -88,6 +92,123 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="34.782608695652179" y="97.767857142857139"/>
+        </scene>
+        <!--Add Item-->
+        <scene sceneID="kSY-iN-eZO">
+            <objects>
+                <viewController id="5Vi-nO-qde" customClass="AddItem" customModule="StoreApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PaT-MP-oJC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NzR-qJ-aEN">
+                                <rect key="frame" x="0.0" y="59" width="414" height="56"/>
+                                <items>
+                                    <navigationItem title="Add item" id="Gq3-6Y-JRY">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="eHz-Ot-ZXs"/>
+                                        <rightBarButtonItems>
+                                            <barButtonItem systemItem="save" id="ph1-hS-5Nf"/>
+                                            <barButtonItem title="Add Store" id="1iP-3i-IvH">
+                                                <connections>
+                                                    <segue destination="nVJ-QF-KcZ" kind="show" id="w6U-gT-dnp"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </rightBarButtonItems>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j2f-t3-usC">
+                                <rect key="frame" x="10" y="170" width="393" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v9X-cT-PtJ">
+                                <rect key="frame" x="10" y="245" width="393" height="190"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="190" id="7qY-Ge-vdJ"/>
+                                </constraints>
+                            </imageView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="piF-ns-BF3">
+                                <rect key="frame" x="10" y="576" width="393" height="216"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wnw-QP-W87">
+                                <rect key="frame" x="10" y="245" width="393" height="14"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bdu-IX-ECb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wnw-QP-W87" firstAttribute="trailing" secondItem="j2f-t3-usC" secondAttribute="trailing" id="0gb-H7-HLA"/>
+                            <constraint firstItem="piF-ns-BF3" firstAttribute="top" secondItem="v9X-cT-PtJ" secondAttribute="bottom" constant="141" id="6nf-e9-eYM"/>
+                            <constraint firstItem="piF-ns-BF3" firstAttribute="trailing" secondItem="wnw-QP-W87" secondAttribute="trailing" id="DQn-wD-auC"/>
+                            <constraint firstItem="wnw-QP-W87" firstAttribute="leading" secondItem="j2f-t3-usC" secondAttribute="leading" id="MfO-mA-hSD"/>
+                            <constraint firstItem="NzR-qJ-aEN" firstAttribute="trailing" secondItem="bdu-IX-ECb" secondAttribute="trailing" id="PPK-IP-6f4"/>
+                            <constraint firstItem="v9X-cT-PtJ" firstAttribute="leading" secondItem="wnw-QP-W87" secondAttribute="leading" id="Rc2-IM-bVa"/>
+                            <constraint firstItem="j2f-t3-usC" firstAttribute="top" secondItem="NzR-qJ-aEN" secondAttribute="bottom" constant="55" id="Wlo-wF-myc"/>
+                            <constraint firstItem="NzR-qJ-aEN" firstAttribute="leading" secondItem="bdu-IX-ECb" secondAttribute="leading" id="YHo-v1-GqZ"/>
+                            <constraint firstItem="v9X-cT-PtJ" firstAttribute="trailing" secondItem="wnw-QP-W87" secondAttribute="trailing" id="bLc-TW-xdN"/>
+                            <constraint firstItem="v9X-cT-PtJ" firstAttribute="top" secondItem="wnw-QP-W87" secondAttribute="top" id="cvQ-yM-Sgk"/>
+                            <constraint firstItem="j2f-t3-usC" firstAttribute="leading" secondItem="bdu-IX-ECb" secondAttribute="leading" constant="10" id="huY-mK-O1o"/>
+                            <constraint firstItem="wnw-QP-W87" firstAttribute="top" secondItem="j2f-t3-usC" secondAttribute="bottom" constant="41" id="igC-oP-5vu"/>
+                            <constraint firstItem="bdu-IX-ECb" firstAttribute="trailing" secondItem="j2f-t3-usC" secondAttribute="trailing" constant="11" id="igo-Mc-ji4"/>
+                            <constraint firstItem="NzR-qJ-aEN" firstAttribute="top" secondItem="bdu-IX-ECb" secondAttribute="top" constant="15" id="pvr-hu-asG"/>
+                            <constraint firstItem="piF-ns-BF3" firstAttribute="leading" secondItem="wnw-QP-W87" secondAttribute="leading" id="vPD-3n-qwb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="47e-vy-6Mw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4wU-ps-76o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="773.91304347826087" y="99.776785714285708"/>
+        </scene>
+        <!--Add Store-->
+        <scene sceneID="Cfa-Xn-Irq">
+            <objects>
+                <viewController id="nVJ-QF-KcZ" customClass="VCAddStore" customModule="StoreApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e7L-g2-IxV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ojl-6f-MQu">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <items>
+                                    <navigationItem title="Add Store" id="TVq-Mq-OI8">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="0Tq-ss-5cp"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Store Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FkQ-sy-Vv3">
+                                <rect key="frame" x="20" y="140" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gw9-Bs-VpH">
+                                <rect key="frame" x="180" y="351" width="68" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="save"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ya4-p6-Unq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ya4-p6-Unq" firstAttribute="trailing" secondItem="FkQ-sy-Vv3" secondAttribute="trailing" constant="20" id="UUj-di-CCD"/>
+                            <constraint firstItem="gw9-Bs-VpH" firstAttribute="leading" secondItem="ya4-p6-Unq" secondAttribute="leading" constant="180" id="Yue-yG-Qz2"/>
+                            <constraint firstItem="FkQ-sy-Vv3" firstAttribute="top" secondItem="Ojl-6f-MQu" secondAttribute="bottom" constant="40" id="eRh-m1-y2b"/>
+                            <constraint firstItem="Ojl-6f-MQu" firstAttribute="leading" secondItem="ya4-p6-Unq" secondAttribute="leading" id="fzn-wC-uah"/>
+                            <constraint firstItem="gw9-Bs-VpH" firstAttribute="top" secondItem="FkQ-sy-Vv3" secondAttribute="bottom" constant="177" id="nR9-wH-orx"/>
+                            <constraint firstItem="Ojl-6f-MQu" firstAttribute="top" secondItem="ya4-p6-Unq" secondAttribute="top" id="nWK-MO-hrh"/>
+                            <constraint firstItem="ya4-p6-Unq" firstAttribute="trailing" secondItem="gw9-Bs-VpH" secondAttribute="trailing" constant="166" id="nZm-1R-uaQ"/>
+                            <constraint firstItem="Ojl-6f-MQu" firstAttribute="trailing" secondItem="ya4-p6-Unq" secondAttribute="trailing" id="oW7-0y-gEr"/>
+                            <constraint firstItem="FkQ-sy-Vv3" firstAttribute="leading" secondItem="ya4-p6-Unq" secondAttribute="leading" constant="20" id="zSg-KN-2qK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="HVf-8i-Ngz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bHC-9z-fBg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1544.9275362318842" y="97.767857142857139"/>
         </scene>
     </scenes>
     <resources>

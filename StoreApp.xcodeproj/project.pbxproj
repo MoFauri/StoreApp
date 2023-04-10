@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0510B6B229E4A1E90046EBE7 /* AddItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0510B6B129E4A1E90046EBE7 /* AddItem.swift */; };
+		0510B6B429E4A8270046EBE7 /* VCAddStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0510B6B329E4A8270046EBE7 /* VCAddStore.swift */; };
 		055601CE29E2915000D2521E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055601CD29E2915000D2521E /* AppDelegate.swift */; };
 		055601D029E2915000D2521E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055601CF29E2915000D2521E /* SceneDelegate.swift */; };
 		055601D229E2915000D2521E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055601D129E2915000D2521E /* ViewController.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0510B6B129E4A1E90046EBE7 /* AddItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItem.swift; sourceTree = "<group>"; };
+		0510B6B329E4A8270046EBE7 /* VCAddStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCAddStore.swift; sourceTree = "<group>"; };
 		055601CA29E2915000D2521E /* StoreApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		055601CD29E2915000D2521E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		055601CF29E2915000D2521E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +68,8 @@
 				055601CF29E2915000D2521E /* SceneDelegate.swift */,
 				055601D129E2915000D2521E /* ViewController.swift */,
 				055601D329E2915000D2521E /* Main.storyboard */,
+				0510B6B329E4A8270046EBE7 /* VCAddStore.swift */,
+				0510B6B129E4A1E90046EBE7 /* AddItem.swift */,
 				055601E429E2A09600D2521E /* TableViewCell.swift */,
 				055601D929E2915600D2521E /* Assets.xcassets */,
 				055601DB29E2915600D2521E /* LaunchScreen.storyboard */,
@@ -146,6 +152,8 @@
 			files = (
 				055601E529E2A09600D2521E /* TableViewCell.swift in Sources */,
 				055601D229E2915000D2521E /* ViewController.swift in Sources */,
+				0510B6B229E4A1E90046EBE7 /* AddItem.swift in Sources */,
+				0510B6B429E4A8270046EBE7 /* VCAddStore.swift in Sources */,
 				055601CE29E2915000D2521E /* AppDelegate.swift in Sources */,
 				055601D029E2915000D2521E /* SceneDelegate.swift in Sources */,
 				055601D829E2915000D2521E /* StoreApp.xcdatamodeld in Sources */,
