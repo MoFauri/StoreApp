@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StoreApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QX9-GM-Dmn">
+                                <rect key="frame" x="0.0" y="52" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="List" id="4fc-UD-eHl">
+                                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="DO1-Qj-U2a"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="iZp-xJ-gvE">
+                                <rect key="frame" x="0.0" y="96" width="414" height="766"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="235" id="J06-9h-b2D" customClass="TableViewCell" customModule="StoreApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="235"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="J06-9h-b2D" id="eyf-zl-SAb">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="235"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Stor Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qmh-Aa-BaA">
+                                                    <rect key="frame" x="20" y="25" width="150" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="item name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8P-tK-y8t">
+                                                    <rect key="frame" x="0.0" y="203" width="422" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iHx-so-fZz">
+                                                    <rect key="frame" x="256" y="29" width="148" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="66-661092_png-file-upload-image-icon-png-transparent-png" translatesAutoresizingMaskIntoConstraints="NO" id="Gnm-h9-kze">
+                                                    <rect key="frame" x="95" y="67" width="240" height="128"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="qmh-Aa-BaA" firstAttribute="leading" secondItem="eyf-zl-SAb" secondAttribute="leadingMargin" id="1b4-FN-bhc"/>
+                                                <constraint firstAttribute="bottom" secondItem="K8P-tK-y8t" secondAttribute="bottom" constant="11" id="32n-ce-Szk"/>
+                                                <constraint firstAttribute="trailing" secondItem="iHx-so-fZz" secondAttribute="trailing" constant="10" id="4rt-Eo-LJe"/>
+                                                <constraint firstItem="K8P-tK-y8t" firstAttribute="top" secondItem="Gnm-h9-kze" secondAttribute="bottom" constant="8" symbolic="YES" id="EZd-wP-0Lg"/>
+                                                <constraint firstItem="iHx-so-fZz" firstAttribute="top" secondItem="eyf-zl-SAb" secondAttribute="top" constant="29" id="Fhl-0L-VgL"/>
+                                                <constraint firstItem="qmh-Aa-BaA" firstAttribute="top" secondItem="eyf-zl-SAb" secondAttribute="topMargin" constant="14" id="Hs0-Sf-b6q"/>
+                                                <constraint firstItem="K8P-tK-y8t" firstAttribute="leading" secondItem="eyf-zl-SAb" secondAttribute="leading" id="kND-Ri-AVd"/>
+                                                <constraint firstAttribute="trailing" secondItem="K8P-tK-y8t" secondAttribute="trailing" constant="-8" id="uIT-CS-pWw"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iZp-xJ-gvE" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="AW2-1R-bxP"/>
+                            <constraint firstItem="iZp-xJ-gvE" firstAttribute="top" secondItem="QX9-GM-Dmn" secondAttribute="bottom" id="EgS-PM-KWH"/>
+                            <constraint firstItem="QX9-GM-Dmn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="JDH-wS-qpB"/>
+                            <constraint firstItem="iZp-xJ-gvE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YV2-fb-fld"/>
+                            <constraint firstItem="iZp-xJ-gvE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="eNE-Ou-VRr"/>
+                            <constraint firstItem="QX9-GM-Dmn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="h5b-Q4-T8K"/>
+                            <constraint firstItem="QX9-GM-Dmn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="y91-JE-b27"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="66-661092_png-file-upload-image-icon-png-transparent-png" width="840" height="880"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
