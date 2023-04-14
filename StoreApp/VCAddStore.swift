@@ -9,6 +9,21 @@ import UIKit
 
 class VCAddStore: UIViewController {
 
+    @IBAction func bustorenamesave(_ sender: Any) {
+        let store = StoreType(context: contexxt)
+        store.name = Txtstorename.text
+        do {
+            appdelegate.saveContext()
+            Txtstorename.text = ""
+            print("saveit")
+        }
+    }
+    
+    @IBAction func buback(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    @IBOutlet weak var Txtstorename: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

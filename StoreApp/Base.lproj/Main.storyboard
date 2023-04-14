@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nVJ-QF-KcZ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -175,7 +175,11 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="56"/>
                                 <items>
                                     <navigationItem title="Add Store" id="TVq-Mq-OI8">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="0Tq-ss-5cp"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="0Tq-ss-5cp">
+                                            <connections>
+                                                <action selector="buback:" destination="nVJ-QF-KcZ" id="bWP-D7-g4U"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -188,6 +192,9 @@
                                 <rect key="frame" x="180" y="351" width="68" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="save"/>
+                                <connections>
+                                    <action selector="bustorenamesave:" destination="nVJ-QF-KcZ" eventType="touchUpInside" id="0iX-4C-C4Y"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ya4-p6-Unq"/>
@@ -205,6 +212,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HVf-8i-Ngz"/>
+                    <connections>
+                        <outlet property="Txtstorename" destination="FkQ-sy-Vv3" id="h3K-DZ-M1w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bHC-9z-fBg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
